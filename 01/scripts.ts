@@ -20,9 +20,10 @@ const usuarios = [
         pets: ["Naninha"],
     },
 ];
+type dono = { nome: String, pets: String[] }
+const buscarDonoPet = (lista: dono[], nomePet: string) => {
 
-const buscarDonoPet = (lista, nomePet) => {
-    let usuarioEncontrado;
+    let usuarioEncontrado: any;
 
     for (const usuario of lista) {
         if (usuario.pets.includes(nomePet)) {
@@ -37,4 +38,4 @@ const buscarDonoPet = (lista, nomePet) => {
     }
 }
 
-buscarDonoPet(usuarios, 'Guido');
+buscarDonoPet(usuarios, 'Pingo');
